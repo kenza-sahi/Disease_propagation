@@ -40,7 +40,9 @@ int main()
 
 	Restart restart_button = Restart(150, window.getSize().x - 150, window.getSize().y - 150, sf::Color::White);
 
+	bool simulation_end = false;
 	bool end = false;
+
 	Cursor_type cursor_type = arrow;
 	sf::Vector2i mouse_position;
 	sf::Vector2i previous_mouse_position;
@@ -55,9 +57,9 @@ int main()
 
 	Simulation simulation(menu);
 
-	while (window.isOpen())
+	while (window.isOpen() and !end)
 	{
-		while (!menu.end)
+		while (!menu.end and !end)
 		{
 			while (window.pollEvent(sf_event))
 			{
@@ -67,7 +69,7 @@ int main()
 				case sf::Event::Closed:
 
 					window.close();
-					exit(0);
+					end = true;
 					break;
 				}
 			}
@@ -96,7 +98,7 @@ int main()
 
 		window.setMouseCursor(cursor);
 
-		while (!end)
+		while (!simulation_end and !end)
 		{
 			while (window.pollEvent(sf_event))
 			{
@@ -106,7 +108,7 @@ int main()
 				case sf::Event::Closed:
 
 					window.close();
-					exit(0);
+					end = true;
 					break;
 				}
 			}
@@ -129,13 +131,13 @@ int main()
 
 			previous_mouse_position = mouse_position;
 			mouse_position = mouse.getPosition(window);
-			end = restart_button.update(mouse_position, mouse.isButtonPressed(mouse.Left), cursor, cursor_type, window);
+			simulation_end = restart_button.update(mouse_position, mouse.isButtonPressed(mouse.Left), cursor, cursor_type, window);
 			restart_button.draw(window);
 
 			window.display();
 		}
 
-		end = false;
+		simulation_end = false;
 		restart_button.grabbed = false;
 		restart_button.grab_forbiden = false;
 	}
