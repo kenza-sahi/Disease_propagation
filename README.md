@@ -45,3 +45,5 @@ Voici un test sous forme de gif animé avec les paramètres présentés dans l'i
 # Crédits
 
 * [Angel Uriot](https://github.com/angeluriot) : Créateur du projet.
+
+* [Gabin Lefranc](https://github.com/glcraft) : Ajout d'un CMakeLists.
