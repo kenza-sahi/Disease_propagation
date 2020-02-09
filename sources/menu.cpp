@@ -1,5 +1,4 @@
 #include "menu.h"
-#include <iostream>
 
 
 
@@ -469,8 +468,7 @@ Menu::Menu(const std::vector<Variable>& variables, const sf::Color& background)
 	this->variables = variables;
 	this->background = background;
 
-	if (!texts_font.loadFromFile("dependencies/resources/GoogleSans-Bold.ttf"))
-		std::cerr << "ERROR : a font could not be loaded" << std::endl;
+	texts_font.loadFromFile("dependencies/resources/GoogleSans-Bold.ttf");
 }
 
 
@@ -561,11 +559,8 @@ void Menu::init_boxes(const double& boxes_sizes, const double& boxes_position, c
 
 void Menu::init_start(const double& start_size, const double& start_x_position, const double& start_y_position, const sf::Color& start_color)
 {
-	if (!start_texture.loadFromFile("dependencies/resources/start_texture.png"))
-		std::cerr << "ERROR : a texture could not be loaded" << std::endl;
-
-	if (!start_texture_grabbed.loadFromFile("dependencies/resources/start_texture_grabbed.png"))
-		std::cerr << "ERROR : a texture could not be loaded" << std::endl;
+	start_texture.loadFromFile("dependencies/resources/start_texture.png");
+	start_texture_grabbed.loadFromFile("dependencies/resources/start_texture_grabbed.png");
 
 	start_texture.setSmooth(true);
 	start_texture_grabbed.setSmooth(true);
@@ -729,11 +724,8 @@ Restart::Restart(const double& start_size, const double& start_x_position, const
 	grabbed = false;
 	grab_forbiden = false;
 
-	if (!texture.loadFromFile("dependencies/resources/restart_texture.png"))
-		std::cerr << "ERROR : a texture could not be loaded" << std::endl;
-
-	if (!texture_grabbed.loadFromFile("dependencies/resources/restart_texture_grabbed.png"))
-		std::cerr << "ERROR : a texture could not be loaded" << std::endl;
+	texture.loadFromFile("dependencies/resources/restart_texture.png");
+	texture_grabbed.loadFromFile("dependencies/resources/restart_texture_grabbed.png");
 
 	texture.setSmooth(true);
 	texture_grabbed.setSmooth(true);

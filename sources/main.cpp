@@ -1,15 +1,23 @@
 #include "simulation.h"
-#include <iostream>
-#include <SFML/Graphics.hpp>
 
 int main()
 {
+	sf::Uint32 window_settings;
+
+	if (sf::VideoMode::getDesktopMode().width == 1920 and sf::VideoMode::getDesktopMode().height == 1080)
+		window_settings = sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen;
+
+	else
+		window_settings = sf::Style::Close | sf::Style::Titlebar;
+
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 8;
-	sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Disease propagation", sf::Style::Close | sf::Style::Titlebar, settings);
+
+	sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Disease propagation", window_settings, settings);
 
 	sf::Image icon;
 	icon.loadFromFile("dependencies/resources/icon.png");
+
 	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
 	std::vector<Variable> variables;
@@ -59,6 +67,7 @@ int main()
 				case sf::Event::Closed:
 
 					window.close();
+					exit(0);
 					break;
 				}
 			}
@@ -97,6 +106,7 @@ int main()
 				case sf::Event::Closed:
 
 					window.close();
+					exit(0);
 					break;
 				}
 			}
