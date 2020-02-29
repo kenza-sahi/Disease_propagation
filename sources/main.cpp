@@ -35,12 +35,12 @@ int main()
 
 	std::vector<Variable> variables;
 	variables.push_back(Variable("Taille des pixels", Int, 5, 1, 20));
-	variables.push_back(Variable("Pourcentage de vaccinés", Double, 50., 0., 100., 1, 1));
+	variables.push_back(Variable("Pourcentage de vaccinÃ©s", Double, 50., 0., 100., 1, 1));
 	variables.push_back(Variable("Nombre de malades", Int, 1, 1, 1000));
-	variables.push_back(Variable("Mortalité de la maladie", Double, 50., 0., 100., 1, 1));
-	variables.push_back(Variable("Contagiosité de la maladie", Double, 3., 0., 100., 1, 1));
+	variables.push_back(Variable("MortalitÃ© de la maladie", Double, 50., 0., 100., 1, 1));
+	variables.push_back(Variable("ContagiositÃ© de la maladie", Double, 3., 0., 100., 1, 1));
 	variables.push_back(Variable("Temps avant la mort", Int, 50, 1, 1000));
-	variables.push_back(Variable("Temps avant la guérison", Int, 80, 1, 1000));
+	variables.push_back(Variable("Temps avant la guÃ©rison", Int, 80, 1, 1000));
 	variables.push_back(Variable("FPS (0 = pas de limite)", Int, 0, 0, 1000));
 	
 	Menu menu = Menu(variables, sf::Color(20, 20, 200), width, height);
