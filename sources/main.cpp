@@ -2,18 +2,31 @@
 
 int main()
 {
-	sf::Uint32 window_settings;
+	int width;
+	int height;
 
-	if (sf::VideoMode::getDesktopMode().width == 1920 and sf::VideoMode::getDesktopMode().height == 1080)
-		window_settings = sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen;
+	if (sf::VideoMode::getDesktopMode().width > (16. / 9.) * sf::VideoMode::getDesktopMode().height)
+	{
+		height = (sf::VideoMode::getDesktopMode().height * 3) / 4;
+		width = (height * 16) / 9;
+	}
+
+	else if (sf::VideoMode::getDesktopMode().width < (16. / 9.) * sf::VideoMode::getDesktopMode().height)
+	{
+		width = (sf::VideoMode::getDesktopMode().width * 3) / 4;
+		height = (width * 9) / 16;
+	}
 
 	else
-		window_settings = sf::Style::Close | sf::Style::Titlebar;
+	{
+		width = (sf::VideoMode::getDesktopMode().width * 3) / 4;
+		height = (sf::VideoMode::getDesktopMode().height * 3) / 4;
+	}
 
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 8;
 
-	sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Disease propagation", window_settings, settings);
+	sf::RenderWindow window(sf::VideoMode(width, height), "Disease propagation", sf::Style::Close | sf::Style::Titlebar, settings);
 
 	sf::Image icon;
 	icon.loadFromFile("dependencies/resources/icon.png");
@@ -30,15 +43,15 @@ int main()
 	variables.push_back(Variable("Temps avant la guérison", Int, 80, 1, 1000));
 	variables.push_back(Variable("FPS (0 = pas de limite)", Int, 0, 0, 1000));
 	
-	Menu menu = Menu(variables, sf::Color(20, 20, 200));
-	menu.init_names(50, 750, sf::Color::White, window, 150);
+	Menu menu = Menu(variables, sf::Color(20, 20, 200), width, height);
+	menu.init_names(50, 750, sf::Color::White, 150);
 	menu.init_lines(700, 15, 1200, sf::Color(75, 75, 255));
 	menu.init_circles(20, sf::Color::White);
 	menu.init_values(40, 50, sf::Color::White);
 	menu.init_boxes(45, 600, sf::Color::White);
-	menu.init_start(150, window.getSize().x - 150, window.getSize().y - 150, sf::Color::White);
+	menu.init_start(150, 1920 - 150, 1080 - 150, sf::Color::White);
 
-	Restart restart_button = Restart(150, window.getSize().x - 150, window.getSize().y - 150, sf::Color::White);
+	Restart restart_button = Restart(150, 1920 - 150, 1080 - 150, sf::Color::White, width, height);
 
 	bool simulation_end = false;
 	bool end = false;

@@ -4,9 +4,6 @@
 #include "person.h"
 #include <vector>
 
-#define WIDTH	1920 // Largeur de l'écran
-#define HEIGHT	1080 // Hauteeur de l'écran
-
 
 
 // Classe définissant la simulation

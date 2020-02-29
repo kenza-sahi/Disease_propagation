@@ -48,20 +48,7 @@ Simulation::Simulation(const Menu& menu)
 	time_before_death = menu.variables[5].int_value;
 	time_before_cure = menu.variables[6].int_value;
 
-	switch (pixels_size)
-	{
-	case 7:  pixels_size = 6;  break;
-	case 9:  pixels_size = 8;  break;
-	case 11: pixels_size = 10; break;
-	case 13: pixels_size = 12; break;
-	case 14: pixels_size = 15; break;
-	case 16: pixels_size = 15; break;
-	case 17: pixels_size = 15; break;
-	case 18: pixels_size = 20; break;
-	case 19: pixels_size = 20; break;
-	}
-
-	texture.create(WIDTH, HEIGHT);
+	texture.create(menu.width, menu.height);
 	texture.clear(sf::Color::Black);
 	texture.display();
 	sprite = sf::Sprite(texture.getTexture());
@@ -70,9 +57,9 @@ Simulation::Simulation(const Menu& menu)
 	std::vector<Person> temp;
 	temp.clear();
 
-	for (int i = 0; i < WIDTH / pixels_size; i++)
+	for (int i = 0; i < floor((double)menu.width / (double)pixels_size) + 1; i++)
 	{
-		for (int j = 0; j < HEIGHT / pixels_size; j++)
+		for (int j = 0; j < floor((double)menu.height / (double)pixels_size) + 1; j++)
 			temp.push_back(Person(vaccinated_percentage, death_rate));
 
 		population.push_back(temp);
@@ -133,19 +120,6 @@ void Simulation::restart(const Menu& menu)
 	time_before_death = menu.variables[5].int_value;
 	time_before_cure = menu.variables[6].int_value;
 
-	switch (pixels_size)
-	{
-	case 7:  pixels_size = 6;  break;
-	case 9:  pixels_size = 8;  break;
-	case 11: pixels_size = 10; break;
-	case 13: pixels_size = 12; break;
-	case 14: pixels_size = 15; break;
-	case 16: pixels_size = 15; break;
-	case 17: pixels_size = 15; break;
-	case 18: pixels_size = 20; break;
-	case 19: pixels_size = 20; break;
-	}
-
 	texture.clear(sf::Color::Black);
 	texture.display();
 	sprite = sf::Sprite(texture.getTexture());
@@ -154,9 +128,9 @@ void Simulation::restart(const Menu& menu)
 	std::vector<Person> temp;
 	temp.clear();
 
-	for (int i = 0; i < WIDTH / pixels_size; i++)
+	for (int i = 0; i < floor((double)menu.width / (double)pixels_size) + 1; i++)
 	{
-		for (int j = 0; j < HEIGHT / pixels_size; j++)
+		for (int j = 0; j < floor((double)menu.height / (double)pixels_size) + 1; j++)
 			temp.push_back(Person(vaccinated_percentage, death_rate));
 
 		population.push_back(temp);
