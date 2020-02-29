@@ -17,4 +17,7 @@ Disease_propagation.exe
 
 # Fichier temporaire MacOS
 .DS_Store
-w
+
+# Fichiers CLion
+.idea
+*.cbp
