@@ -17,7 +17,6 @@ target_include_directories(Disease_propagation PRIVATE ${CMAKE_SOURCE_DIR}/inclu
 find_package(SFML COMPONENTS system window graphics REQUIRED)
 target_link_libraries(Disease_propagation PRIVATE     
         sfml-system
-        sfml-main
         sfml-window
         sfml-graphics
     )

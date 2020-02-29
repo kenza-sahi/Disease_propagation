@@ -3,7 +3,7 @@
 #include "menu.h"
 #include "person.h"
 #include <vector>
-
+#include <cmath>
 
 
 // Classe définissant la simulation
@@ -21,7 +21,7 @@ public:
 	int									time_before_death;		// Temps avant la mort
 	int									time_before_cure;		// Temps avant de guérir
 	sf::RectangleShape					person;					// Un pixel à afficher
-	std::vector<std::vector<Person>>	population;				// La population
+	std::vector<std::vector<Person> >	population;				// La population
 	sf::RenderTexture					texture;				// La texture sur laquelle sont dessinés les pixels
 	sf::Sprite							sprite;					// Le sprite servant à afficher la texture
 
