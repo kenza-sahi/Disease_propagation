@@ -224,7 +224,7 @@ Variable::Variable(const Variable& variable)
 
 // Construit une variable à partir de ces paramètres
 
-Variable::Variable(const std::string& name, Variable_type type, const double& initial_value, double min, double max, int precision, bool percent)
+Variable::Variable(const wchar_t* name, Variable_type type, const double& initial_value, double min, double max, int precision, bool percent)
 {
 	this->name.setString(name);
 	this->precision = precision;

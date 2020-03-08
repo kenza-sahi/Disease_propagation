@@ -95,7 +95,7 @@ public:
 
 	Variable();
 	Variable(const Variable& variable);
-	Variable(const std::string& name, Variable_type type, const double& initial_value, double min = 0., double max = 1., int precision = 0, bool percent = false);
+	Variable(const wchar_t* name, Variable_type type, const double& initial_value, double min = 0., double max = 1., int precision = 0, bool percent = false);
 
 	void operator=(const Variable& variable);
 

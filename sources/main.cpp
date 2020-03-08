@@ -34,14 +34,14 @@ int main()
 	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
 	std::vector<Variable> variables;
-	variables.push_back(Variable("Taille des pixels", Int, 5, 1, 20));
-	variables.push_back(Variable("Pourcentage de vaccinés", Double, 50., 0., 100., 1, 1));
-	variables.push_back(Variable("Nombre de malades", Int, 1, 1, 1000));
-	variables.push_back(Variable("Mortalité de la maladie", Double, 50., 0., 100., 1, 1));
-	variables.push_back(Variable("Contagiosité de la maladie", Double, 3., 0., 100., 1, 1));
-	variables.push_back(Variable("Temps avant la mort", Int, 50, 1, 1000));
-	variables.push_back(Variable("Temps avant la guérison", Int, 80, 1, 1000));
-	variables.push_back(Variable("FPS (0 = pas de limite)", Int, 0, 0, 1000));
+	variables.push_back(Variable(L"Taille des pixels", Int, 5, 1, 20));
+	variables.push_back(Variable(L"Pourcentage de vaccinés", Double, 50., 0., 100., 1, 1));
+	variables.push_back(Variable(L"Nombre de malades", Int, 1, 1, 1000));
+	variables.push_back(Variable(L"Mortalité de la maladie", Double, 50., 0., 100., 1, 1));
+	variables.push_back(Variable(L"Contagiosité de la maladie", Double, 3., 0., 100., 1, 1));
+	variables.push_back(Variable(L"Temps avant la mort", Int, 50, 1, 1000));
+	variables.push_back(Variable(L"Temps avant la guérison", Int, 80, 1, 1000));
+	variables.push_back(Variable(L"FPS (0 = pas de limite)", Int, 0, 0, 1000));
 	
 	Menu menu = Menu(variables, sf::Color(20, 20, 200), width, height);
 	menu.init_names(50, 750, sf::Color::White, 150);
