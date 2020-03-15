@@ -18,6 +18,28 @@ Ce dépôt contient le code source d'une simulation de propagation de maladie.
 
 <br/>
 
+# Compilation
+
+## Outils nécéssaires
+
+- [CMake](https://cmake.org/)
+- (Windows seulement) Visual Studio
+- (Unix seulement) [SFML](https://www.sfml-dev.org/) et GNU Make
+
+Remarque : SFML est aussi nécéssaire pour lancer l'application (ne la distribuez donc pas sans)
+
+## Windows
+
+Ouvrez le dossier du projet, et lancez `cmake .` puis ouvrez la solution générée dans Visual Studio
+
+## Unix
+
+```
+$ cmake .
+$ make
+$ ./Disease_propagation
+```
+
 # Utilisation
 
 Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [Releases](https://github.com/angeluriot/Disease_propagation/releases).

@@ -6,7 +6,7 @@
 
 
 
-// Classe définissant une ligne
+// Classe dÃ©finissant une ligne
 
 class Line
 {
@@ -29,7 +29,7 @@ public:
 
 
 
-// Clase définissant une case à cocher
+// Clase dÃ©finissant une case Ã  cocher
 
 class Box
 {
@@ -67,7 +67,7 @@ enum Cursor_type { arrow, hand, resizing };
 
 
 
-// Clase définissant une variable
+// Clase dÃ©finissant une variable
 
 class Variable
 {
@@ -95,7 +95,7 @@ public:
 
 	Variable();
 	Variable(const Variable& variable);
-	Variable(const std::string& name, Variable_type type, const double& initial_value, double min = 0., double max = 1., int precision = 0, bool percent = false);
+	Variable(const wchar_t* name, Variable_type type, const double& initial_value, double min = 0., double max = 1., int precision = 0, bool percent = false);
 
 	void operator=(const Variable& variable);
 
@@ -108,7 +108,7 @@ public:
 
 
 
-// Clase définissant le menu
+// Clase dÃ©finissant le menu
 
 class Menu
 {
@@ -146,7 +146,7 @@ public:
 
 
 
-// Classe définissant un bouton pour recommencer
+// Classe dÃ©finissant un bouton pour recommencer
 
 class Restart
 {

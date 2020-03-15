@@ -15,7 +15,7 @@ Person::Person()
 
 
 
-// Construit une personne à partir d'une autre personne
+// Construit une personne Ã  partir d'une autre personne
 
 Person::Person(const Person& person)
 {
@@ -27,7 +27,7 @@ Person::Person(const Person& person)
 
 
 
-// Construit une personne à partir de ces paramètres
+// Construit une personne Ã  partir de ces paramÃ¨tres
 
 Person::Person(const double& vaccinated_percentage, const double& death_rate)
 {
@@ -55,7 +55,7 @@ void Person::operator=(const Person& person)
 
 
 
-// Donne "vrai" avec une probabilité choisie
+// Donne "vrai" avec une probabilitÃ© choisie
 
 bool rand_probability(const double& probability)
 {

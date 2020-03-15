@@ -2,7 +2,7 @@
 
 
 
-// Crée une simulation
+// CrÃ©e une simulation
 
 Simulation::Simulation()
 {
@@ -18,7 +18,7 @@ Simulation::Simulation()
 
 
 
-// Crée une simulation à partir d'une autre
+// CrÃ©e une simulation Ã  partir d'une autre
 
 Simulation::Simulation(const Simulation& simulation)
 {
@@ -36,7 +36,7 @@ Simulation::Simulation(const Simulation& simulation)
 
 
 
-// Crée une simulation à partir des données du menu
+// CrÃ©e une simulation Ã  partir des donnÃ©es du menu
 
 Simulation::Simulation(const Menu& menu)
 {
@@ -108,7 +108,7 @@ void Simulation::operator=(const Simulation& simulation)
 
 
 
-// Recrrée une simulation à partir des données du menu
+// RecrrÃ©e une simulation Ã  partir des donnÃ©es du menu
 
 void Simulation::restart(const Menu& menu)
 {
@@ -204,7 +204,7 @@ void Simulation::draw_population()
 
 
 
-// Enlève la sécurité qui empèche de prendre en compte plusieurs fois une personne
+// EnlÃ¨ve la sÃ©curitÃ© qui empÃ¨che de prendre en compte plusieurs fois une personne
 
 void Simulation::refresh_population()
 {
@@ -217,7 +217,7 @@ void Simulation::refresh_population()
 
 
 
-// Empèche de choisir une case en dehors du tableau
+// EmpÃ¨che de choisir une case en dehors du tableau
 
 bool Simulation::anti_segfault(int x, int y)
 {
@@ -226,7 +226,7 @@ bool Simulation::anti_segfault(int x, int y)
 
 
 
-// Met à jour les personnes non vaccinées
+// Met Ã  jour les personnes non vaccinÃ©es
 
 void Simulation::update_healthy(int x, int y)
 {
@@ -252,7 +252,7 @@ void Simulation::update_healthy(int x, int y)
 
 
 
-// Met à jour les personnes malades
+// Met Ã  jour les personnes malades
 
 void Simulation::update_sick(int x, int y)
 {
@@ -279,7 +279,7 @@ void Simulation::update_sick(int x, int y)
 
 
 
-// Met à jour la population
+// Met Ã  jour la population
 
 void Simulation::update()
 {

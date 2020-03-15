@@ -3,10 +3,10 @@
 #include "menu.h"
 #include "person.h"
 #include <vector>
+#include <cmath>
 
 
-
-// Classe définissant la simulation
+// Classe dÃ©finissant la simulation
 
 class Simulation
 {
@@ -14,16 +14,16 @@ class Simulation
 public:
 
 	int									pixels_size;			// Taille des pixels
-	double								vaccinated_percentage;	// Pourcentages de personnes vaccinées
+	double								vaccinated_percentage;	// Pourcentages de personnes vaccinÃ©es
 	int									nb_sick;				// Nombre de gens malades
 	double								death_rate;				// Pourcentage de chance de mourir de la maladie
-	double								contagious_level;		// Contagiosité de la maladie
+	double								contagious_level;		// ContagiositÃ© de la maladie
 	int									time_before_death;		// Temps avant la mort
-	int									time_before_cure;		// Temps avant de guérir
-	sf::RectangleShape					person;					// Un pixel à afficher
-	std::vector<std::vector<Person>>	population;				// La population
-	sf::RenderTexture					texture;				// La texture sur laquelle sont dessinés les pixels
-	sf::Sprite							sprite;					// Le sprite servant à afficher la texture
+	int									time_before_cure;		// Temps avant de guÃ©rir
+	sf::RectangleShape					person;					// Un pixel Ã  afficher
+	std::vector<std::vector<Person> >	population;				// La population
+	sf::RenderTexture					texture;				// La texture sur laquelle sont dessinÃ©s les pixels
+	sf::Sprite							sprite;					// Le sprite servant Ã  afficher la texture
 
 	Simulation();
 	Simulation(const Simulation& simulation);

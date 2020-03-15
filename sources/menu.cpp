@@ -14,7 +14,7 @@ Line::Line()
 
 
 
-// Construit une ligne à partir d'une autre ligne
+// Construit une ligne Ã  partir d'une autre ligne
 
 Line::Line(const Line& line)
 {
@@ -25,7 +25,7 @@ Line::Line(const Line& line)
 
 
 
-// Construit une ligne à partir de ces propriétés
+// Construit une ligne Ã  partir de ces propriÃ©tÃ©s
 
 Line::Line(const double& size, const double& width, const double& x_position, const double& y_position, const sf::Color& color)
 {
@@ -97,7 +97,7 @@ Box::Box()
 
 
 
-// Construit une case à partir d'une autre case
+// Construit une case Ã  partir d'une autre case
 
 Box::Box(const Box& box)
 {
@@ -112,7 +112,7 @@ Box::Box(const Box& box)
 
 
 
-// Construit une case à partir de ces propriétés
+// Construit une case Ã  partir de ces propriÃ©tÃ©s
 
 Box::Box(const double& size, const double& width, const double& x_position, const double& y_position, const sf::Color& color)
 {
@@ -196,7 +196,7 @@ Variable::Variable()
 
 
 
-// Construit une variable à partir d'une autre variable
+// Construit une variable Ã  partir d'une autre variable
 
 Variable::Variable(const Variable& variable)
 {
@@ -222,9 +222,9 @@ Variable::Variable(const Variable& variable)
 
 
 
-// Construit une variable à partir de ces paramètres
+// Construit une variable Ã  partir de ces paramÃ¨tres
 
-Variable::Variable(const std::string& name, Variable_type type, const double& initial_value, double min, double max, int precision, bool percent)
+Variable::Variable(const wchar_t* name, Variable_type type, const double& initial_value, double min, double max, int precision, bool percent)
 {
 	this->name.setString(name);
 	this->precision = precision;
@@ -341,7 +341,7 @@ double Variable::get_value_from_circle()
 
 
 
-// Met à jour la variable
+// Met Ã  jour la variable
 
 void Variable::update(const sf::Vector2i& previous_mouse_position, const sf::Vector2i& mouse_position, bool left_click)
 {
@@ -446,7 +446,7 @@ Menu::Menu()
 
 
 
-// Construit un menu à partir d'un autre menu
+// Construit un menu Ã  partir d'un autre menu
 
 Menu::Menu(const Menu& menu)
 {
@@ -465,7 +465,7 @@ Menu::Menu(const Menu& menu)
 
 
 
-// Construit un menu à partir de ces paramètres
+// Construit un menu Ã  partir de ces paramÃ¨tres
 
 Menu::Menu(const std::vector<Variable>& variables, const sf::Color& background, int width, int height)
 {
@@ -527,7 +527,7 @@ void Menu::init_circles(const double& circles_radius, const sf::Color& circle_co
 
 
 
-// Initialise les valeurs affichées
+// Initialise les valeurs affichÃ©es
 
 void Menu::init_values(int value_size, const double& values_position, const sf::Color& value_color)
 {
@@ -546,7 +546,7 @@ void Menu::init_values(int value_size, const double& values_position, const sf::
 
 
 
-// Initialise les cases à cocher
+// Initialise les cases Ã  cocher
 
 void Menu::init_boxes(const double& boxes_sizes, const double& boxes_position, const sf::Color& boxes_color)
 {
@@ -613,7 +613,7 @@ bool Menu::is_in(sf::Vector2f position)
 
 
 
-// Met à jour le menu
+// Met Ã  jour le menu
 
 void Menu::update(const sf::Vector2i& previous_mouse_position, const sf::Vector2i& mouse_position, bool left_click, sf::Cursor& cursor, Cursor_type& cursor_type, sf::RenderWindow& window)
 {
@@ -713,7 +713,7 @@ Restart::Restart()
 
 
 
-// Construit un bouton recommencer à partir d'un autre
+// Construit un bouton recommencer Ã  partir d'un autre
 
 Restart::Restart(const Restart& restart)
 {
@@ -726,7 +726,7 @@ Restart::Restart(const Restart& restart)
 
 
 
-// Construit un bouton recommencer à partir de ces paramètres
+// Construit un bouton recommencer Ã  partir de ces paramÃ¨tres
 
 Restart::Restart(const double& start_size, const double& start_x_position, const double& start_y_position, const sf::Color& start_color, int width, int height)
 {
@@ -774,7 +774,7 @@ bool Restart::is_in(sf::Vector2f position)
 
 
 
-// Met à jour le bouton recommencer
+// Met Ã  jour le bouton recommencer
 
 bool Restart::update(const sf::Vector2i& mouse_position, bool left_click, sf::Cursor& cursor, Cursor_type& cursor_type, sf::RenderWindow& window)
 {
@@ -842,7 +842,7 @@ void Restart::draw(sf::RenderWindow& window)
 
 
 
-// Transforme un nombre réel en text
+// Transforme un nombre rÃ©el en text
 
 std::string double_to_string(const double& value, int precision, bool percent)
 {
@@ -878,7 +878,7 @@ std::string double_to_string(const double& value, int precision, bool percent)
 
 
 
-// Permet de gérer les différentes tailles d'écrans
+// Permet de gÃ©rer les diffÃ©rentes tailles d'Ã©crans
 
 double resize(double value, double width)
 {
