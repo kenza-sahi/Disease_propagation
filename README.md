@@ -18,6 +18,18 @@ Ce dépôt contient le code source d'une simulation de propagation de maladie.
 
 <br/>
 
+# Utilisation
+
+Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [Releases](https://github.com/angeluriot/Disease_propagation/releases).
+
+<br/>
+
+<p align="center">
+	<img src="https://i.imgur.com/bgHVsj3.png" width="700">
+</p>
+
+<br/>
+
 # Compilation
 
 ## Outils nécéssaires
@@ -39,16 +51,6 @@ $ cmake .
 $ make
 $ ./Disease_propagation
 ```
-
-# Utilisation
-
-Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [Releases](https://github.com/angeluriot/Disease_propagation/releases).
-
-<br/>
-
-<p align="center">
-	<img src="https://i.imgur.com/bgHVsj3.png" width="700">
-</p>
 
 <br/>
 
