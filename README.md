@@ -30,30 +30,6 @@ Le programme comporte un menu intégré pour changer les différents paramètres
 
 <br/>
 
-# Compilation
-
-## Outils nécéssaires
-
-- [CMake](https://cmake.org/)
-- (Windows seulement) Visual Studio
-- (Unix seulement) [SFML](https://www.sfml-dev.org/) et GNU Make
-
-Remarque : SFML est aussi nécéssaire pour lancer l'application (ne la distribuez donc pas sans)
-
-## Windows
-
-Ouvrez le dossier du projet, et lancez `cmake .` puis ouvrez la solution générée dans Visual Studio
-
-## Unix
-
-```
-$ cmake .
-$ make
-$ ./Disease_propagation
-```
-
-<br/>
-
 # Tests
 
 Voici un test sous forme de gif animé avec les paramètres présentés dans l'image de la partie [Utilisation](#utilisation) :
