@@ -18,6 +18,14 @@ Ce dépôt contient le code source d'une simulation de propagation de maladie.
 
 <br/>
 
+# Vidéo
+
+Voici une vidéo expliquant le fonctionnement de l'algorithme :
+
+[**► SIMULER L'ÉVOLUTION DU CORONAVIRUS 🦠💻**](https://www.youtube.com/watch?v=hrLrEfP2Wjo)
+
+<br/>
+
 # Utilisation
 
 Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [**Releases**](https://github.com/angeluriot/Disease_propagation/releases).
@@ -39,6 +47,12 @@ Voici un test sous forme de gif animé avec les paramètres présentés dans l'i
 <p align="center">
 	<img src="https://i.imgur.com/6u8uwZK.gif" width="700">
 </p>
+
+<br/>
+
+# Remarque
+
+J'ai fait une deuxième version de ce projet : [**Disease_propagation_2**](https://github.com/angeluriot/Disease_propagation_2)
 
 <br/>
 
