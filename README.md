@@ -20,7 +20,7 @@ Ce dépôt contient le code source d'une simulation de propagation de maladie.
 
 # Utilisation
 
-Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [Releases](https://github.com/angeluriot/Disease_propagation/releases).
+Le programme comporte un menu intégré pour changer les différents paramètres de la simulation, si vous souhaitez uniquement tester la simulation, vous pouvez consulter les [**Releases**](https://github.com/angeluriot/Disease_propagation/releases).
 
 <br/>
 
@@ -32,7 +32,7 @@ Le programme comporte un menu intégré pour changer les différents paramètres
 
 # Tests
 
-Voici un test sous forme de gif animé avec les paramètres présentés dans l'image de la partie [Utilisation](#utilisation) :
+Voici un test sous forme de gif animé avec les paramètres présentés dans l'image de la partie [**Utilisation**](#utilisation) :
 
 <br/>
 
@@ -44,6 +44,6 @@ Voici un test sous forme de gif animé avec les paramètres présentés dans l'i
 
 # Crédits
 
-* [Angel Uriot](https://github.com/angeluriot) : Créateur du projet.
+* [**Angel Uriot**](https://github.com/angeluriot) : Créateur du projet.
 
-* [Gabin Lefranc](https://github.com/glcraft) : Ajout d'un CMakeLists.
+* [**Gabin Lefranc**](https://github.com/glcraft) : Ajout d'un CMakeLists.
